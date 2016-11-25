@@ -19,7 +19,7 @@
         }
 
         [AttachedPropertyBrowsableForChildren(IncludeDescendants = false)]
-        [AttachedPropertyBrowsableForType(typeof(Cell))]
+        [AttachedPropertyBrowsableForType(typeof(Grid))]
         public static RowDefinitions GetDefinitions(System.Windows.Controls.Grid element)
         {
             return (RowDefinitions)element.GetValue(DefinitionsProperty);

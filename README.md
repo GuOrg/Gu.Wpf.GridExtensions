@@ -1,7 +1,8 @@
 # Gu.Wpf.GridExtensions
 
 Attached properties for WPF's `Grid`
-Sample:
+
+## Sample.
 
 ```xaml
 <!-- xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions" -->
@@ -18,7 +19,22 @@ Sample:
 </Grid>
 ```
 
-Sample of usage in a style:
+## Sample using the layout attached property.
+
+```xaml
+<Grid grid:Grid.Layout="* *, * *">
+	<Rectangle grid:Cell.Index="1 1" Fill="Red" />
+	<Rectangle grid:Cell.Index="1 0" Fill="Green" />
+	<Rectangle Grid.Row="0"
+			   Grid.Column="0"
+			   Fill="Blue" />
+	<Rectangle Grid.Row="0"
+			   Grid.Column="2"
+			   Fill="Yellow" />
+</Grid>
+```
+
+## Sample of usage in a style.
 
 ```xaml
 <UserControl.Resources>

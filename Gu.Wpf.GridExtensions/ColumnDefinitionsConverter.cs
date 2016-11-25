@@ -8,19 +8,9 @@ namespace Gu.Wpf.GridExtensions
 
     public class ColumnDefinitionsConverter : TypeConverter
     {
-        public override bool CanConvertFrom(
-            ITypeDescriptorContext typeDescriptorContext,
-            Type sourceType)
-        {
-            return sourceType == typeof(string);
-        }
+        public override bool CanConvertFrom(ITypeDescriptorContext typeDescriptorContext, Type sourceType) => sourceType == typeof(string);
 
-        public override bool CanConvertTo(
-            ITypeDescriptorContext typeDescriptorContext,
-            Type destinationType)
-        {
-            return false;
-        }
+        public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext,Type destinationType) => false;
 
         public override object ConvertFrom(
             ITypeDescriptorContext typeDescriptorContext,
@@ -31,7 +21,7 @@ namespace Gu.Wpf.GridExtensions
             if (text != null)
             {
                 var lengths = GridLengthsParser.Parse(typeDescriptorContext, cultureInfo, text);
-                var columnDefinitions = lengths.Select(gl => new System.Windows.Controls.ColumnDefinition {Width = gl})
+                var columnDefinitions = lengths.Select(gl => new System.Windows.Controls.ColumnDefinition { Width = gl })
                                                .ToArray();
                 return new ColumnDefinitions(columnDefinitions);
             }

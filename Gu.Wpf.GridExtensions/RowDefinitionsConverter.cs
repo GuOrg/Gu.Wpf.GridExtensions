@@ -9,26 +9,11 @@ namespace Gu.Wpf.GridExtensions
 
     public class RowDefinitionsConverter : TypeConverter
     {
-        public override bool CanConvertFrom(
-            ITypeDescriptorContext typeDescriptorContext,
-            Type sourceType)
-        {
-            return sourceType == typeof(string);
-        }
+        public override bool CanConvertFrom(ITypeDescriptorContext typeDescriptorContext, Type sourceType) => sourceType == typeof(string);
 
-        public override bool CanConvertTo(
-            ITypeDescriptorContext typeDescriptorContext,
-            Type destinationType)
-        {
-            return false;
-            ////return destinationType == typeof(InstanceDescriptor) ||
-            ////       destinationType == typeof(string);
-        }
+        public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext, Type destinationType) => false;
 
-        public override object ConvertFrom(
-            ITypeDescriptorContext typeDescriptorContext,
-            CultureInfo cultureInfo,
-            object source)
+        public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object source)
         {
             var text = source as string;
             if (text != null)
