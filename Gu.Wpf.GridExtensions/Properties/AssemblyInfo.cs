@@ -15,5 +15,5 @@ using System.Windows.Markup;
 [assembly:ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 [assembly: AssemblyVersion("0.1.0.0")]
 [assembly: AssemblyFileVersion("0.1.0.0")]
-[assembly: XmlnsDefinition("https://github.com/JohanLarsson/Gu.Wpf.PropertyGrid", "Gu.Wpf.GridExtensions")]
-[assembly: XmlnsPrefix("https://github.com/JohanLarsson/Gu.Wpf.PropertyGrid", "grid")]
+[assembly: XmlnsDefinition("https://github.com/JohanLarsson/Gu.Wpf.GridExtensions", "Gu.Wpf.GridExtensions")]
+[assembly: XmlnsPrefix("https://github.com/JohanLarsson/Gu.Wpf.GridExtensions", "grid")]
