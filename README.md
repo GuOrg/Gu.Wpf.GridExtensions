@@ -4,6 +4,8 @@ Attached properties for WPF's `Grid`
 Sample:
 
 ```xaml
+<!-- xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.PropertyGrid" -->
+
 <Grid grid:Column.Definitions="* *" grid:Row.Definitions="* *">
     <Rectangle grid:Cell.Index="1 1" Fill="Red" />
     <Rectangle grid:Cell.Index="1 0" Fill="Green" />
