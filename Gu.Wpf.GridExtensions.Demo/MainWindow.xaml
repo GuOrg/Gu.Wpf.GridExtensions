@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:demo="clr-namespace:Gu.Wpf.GridExtensions.Demo"
-        xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions"
+        xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="MainWindow"
         Width="525"

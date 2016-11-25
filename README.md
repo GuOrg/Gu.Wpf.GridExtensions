@@ -5,7 +5,7 @@ Attached properties for WPF's `Grid`
 ## Sample.
 
 ```xaml
-<!-- xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions" -->
+<!-- xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf" -->
 
 <Grid gu:Column.Definitions="* *" gu:Row.Definitions="* *">
     <Rectangle gu:Cell.Index="1 1" Fill="Red" />
