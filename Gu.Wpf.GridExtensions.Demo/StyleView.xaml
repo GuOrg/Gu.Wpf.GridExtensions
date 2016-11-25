@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="Gu.Wpf.GridExtensions.Demo.StyleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.PropertyGrid"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <grid:ColumnDefinitions x:Key="Columns" x:Shared="False">
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </grid:ColumnDefinitions>
+
+        <grid:RowDefinitions x:Key="Rows" x:Shared="False">
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </grid:RowDefinitions>
+
+        <Style x:Key="GridStyle" TargetType="{x:Type Grid}">
+            <Setter Property="grid:Column.Definitions" Value="{StaticResource Columns}" />
+            <Setter Property="grid:Row.Definitions" Value="{StaticResource Rows}" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Style="{StaticResource GridStyle}">
+        <TextBlock grid:Cell.Index="0 0" Text="0 0" />
+        <TextBlock grid:Cell.Index="0 1" Text="0 1" />
+        <TextBlock grid:Cell.Index="2 1" Text="2 1" />
+    </Grid>
+</UserControl>

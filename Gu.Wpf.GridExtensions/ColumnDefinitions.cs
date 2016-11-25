@@ -7,6 +7,10 @@ namespace Gu.Wpf.GridExtensions
     [TypeConverter(typeof(ColumnDefinitionsConverter))]
     public class ColumnDefinitions : Collection<System.Windows.Controls.ColumnDefinition>
     {
+        public ColumnDefinitions()
+        {
+        }
+
         public ColumnDefinitions(IList<System.Windows.Controls.ColumnDefinition> collection)
             : base(collection)
         {

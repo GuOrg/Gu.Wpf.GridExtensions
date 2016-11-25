@@ -8,6 +8,10 @@ namespace Gu.Wpf.GridExtensions
     [TypeConverter(typeof(RowDefinitionsConverter))]
     public class RowDefinitions : Collection<RowDefinition>
     {
+        public RowDefinitions()
+        {
+        }
+
         public RowDefinitions(IList<RowDefinition> definitions)
             : base(definitions)
         {
