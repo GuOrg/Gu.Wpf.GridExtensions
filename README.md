@@ -5,11 +5,11 @@ Attached properties for WPF's `Grid`
 ## Sample.
 
 ```xaml
-<!-- xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions" -->
+<!-- xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions" -->
 
-<Grid grid:Column.Definitions="* *" grid:Row.Definitions="* *">
-    <Rectangle grid:Cell.Index="1 1" Fill="Red" />
-    <Rectangle grid:Cell.Index="1 0" Fill="Green" />
+<Grid gu:Column.Definitions="* *" gu:Row.Definitions="* *">
+    <Rectangle gu:Cell.Index="1 1" Fill="Red" />
+    <Rectangle gu:Cell.Index="1 0" Fill="Green" />
     <Rectangle Grid.Row="0"
                Grid.Column="0"
                Fill="Blue" />
@@ -22,9 +22,9 @@ Attached properties for WPF's `Grid`
 ## Sample using the layout attached property.
 
 ```xaml
-<Grid grid:Grid.Layout="* *, * *">
-	<Rectangle grid:Cell.Index="1 1" Fill="Red" />
-	<Rectangle grid:Cell.Index="1 0" Fill="Green" />
+<Grid gu:Grid.Layout="* *, * *">
+	<Rectangle gu:Cell.Index="1 1" Fill="Red" />
+	<Rectangle gu:Cell.Index="1 0" Fill="Green" />
 	<Rectangle Grid.Row="0"
 			   Grid.Column="0"
 			   Fill="Blue" />
@@ -38,26 +38,26 @@ Attached properties for WPF's `Grid`
 
 ```xaml
 <UserControl.Resources>
-	<grid:ColumnDefinitions x:Key="Columns" x:Shared="False">
+	<gu:ColumnDefinitions x:Key="Columns" x:Shared="False">
 		<ColumnDefinition Width="Auto" />
 		<ColumnDefinition Width="*" />
-	</grid:ColumnDefinitions>
+	</gu:ColumnDefinitions>
 
-	<grid:RowDefinitions x:Key="Rows" x:Shared="False">
+	<gu:RowDefinitions x:Key="Rows" x:Shared="False">
 		<RowDefinition Height="Auto" />
 		<RowDefinition Height="Auto" />
 		<RowDefinition Height="*" />
-	</grid:RowDefinitions>
+	</gu:RowDefinitions>
 
 	<Style x:Key="GridStyle" TargetType="{x:Type Grid}">
-		<Setter Property="grid:Column.Definitions" Value="{StaticResource Columns}" />
-		<Setter Property="grid:Row.Definitions" Value="{StaticResource Rows}" />
+		<Setter Property="gu:Column.Definitions" Value="{StaticResource Columns}" />
+		<Setter Property="gu:Row.Definitions" Value="{StaticResource Rows}" />
 	</Style>
 </UserControl.Resources>
 
 <Grid Style="{StaticResource GridStyle}">
-	<TextBlock grid:Cell.Index="0 0" Text="0 0" />
-	<TextBlock grid:Cell.Index="0 1" Text="0 1" />
-	<TextBlock grid:Cell.Index="2 1" Text="2 1" />
+	<TextBlock gu:Cell.Index="0 0" Text="0 0" />
+	<TextBlock gu:Cell.Index="0 1" Text="0 1" />
+	<TextBlock gu:Cell.Index="2 1" Text="2 1" />
 </Grid>
 ```

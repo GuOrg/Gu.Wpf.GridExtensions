@@ -2,15 +2,15 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions"
+             xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions"
              xmlns:local="clr-namespace:Gu.Wpf.GridExtensions.Demo"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              d:DesignHeight="300"
              d:DesignWidth="300"
              mc:Ignorable="d">
-    <Grid grid:Grid.Layout="* *, * *">
-        <Rectangle grid:Cell.Index="1 1" Fill="Red" />
-        <Rectangle grid:Cell.Index="1 0" Fill="Green" />
+    <Grid gu:Grid.Layout="* *, * *">
+        <Rectangle gu:Cell.Index="1 1" Fill="Red" />
+        <Rectangle gu:Cell.Index="1 0" Fill="Green" />
         <Rectangle Grid.Row="0"
                    Grid.Column="0"
                    Fill="Blue" />

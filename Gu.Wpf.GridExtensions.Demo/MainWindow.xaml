@@ -3,15 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:demo="clr-namespace:Gu.Wpf.GridExtensions.Demo"
-        xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions"
+        xmlns:gu="https://github.com/JohanLarsson/Gu.Wpf.GridExtensions"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="MainWindow"
         Width="525"
         Height="350"
         mc:Ignorable="d">
-    <Grid grid:Column.Definitions="* *" grid:Row.Definitions="* *">
-        <Rectangle grid:Cell.Index="1 1" Fill="Red" />
-        <Rectangle grid:Cell.Index="1 0" Fill="Green" />
+    <Grid gu:Column.Definitions="* *" gu:Row.Definitions="* *">
+        <Rectangle gu:Cell.Index="1 1" Fill="Red" />
+        <Rectangle gu:Cell.Index="1 0" Fill="Green" />
         <Rectangle Grid.Row="0"
                    Grid.Column="0"
                    Fill="Blue" />
