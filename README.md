@@ -14,4 +14,4 @@ Sample:
                Grid.Column="2"
                Fill="Yellow" />
 </Grid>
-```xaml
+```
