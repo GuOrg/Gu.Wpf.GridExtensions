@@ -1,0 +1,4 @@
+FRAMEWORK: >= NET45
+NUGET
+  remote: https://www.nuget.org/api/v2
+    WpfAnalyzers (0.2.4-dev)

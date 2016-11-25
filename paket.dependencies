@@ -1,0 +1,6 @@
+source C:\Git\Guget
+source https://www.nuget.org/api/v2/
+source C:\Git\Gu.Units\publish
+framework >= net45
+
+nuget WpfAnalyzers 0.2.4.0-dev dev

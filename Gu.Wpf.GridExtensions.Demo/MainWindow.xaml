@@ -1,0 +1,21 @@
+﻿<Window x:Class="Gu.Wpf.GridExtensions.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:grid="https://github.com/JohanLarsson/Gu.Wpf.PropertyGrid"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="525"
+        Height="350"
+        mc:Ignorable="d">
+    <Grid grid:Column.Definitions="* *" grid:Row.Definitions="* *">
+        <Rectangle grid:Cell.Index="1 1" Fill="Red" />
+        <Rectangle grid:Cell.Index="1 0" Fill="Green" />
+        <Rectangle Grid.Row="0"
+                   Grid.Column="0"
+                   Fill="Blue" />
+        <Rectangle Grid.Row="0"
+                   Grid.Column="2"
+                   Fill="Yellow" />
+    </Grid>
+</Window>
