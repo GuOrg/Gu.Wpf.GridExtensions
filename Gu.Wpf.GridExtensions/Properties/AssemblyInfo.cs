@@ -4,9 +4,9 @@ using System.Windows;
 using System.Windows.Markup;
 
 [assembly: AssemblyTitle("Gu.Wpf.GridExtensions")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Convenience attached properties for WPF's Grid.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Johan Larsson")]
 [assembly: AssemblyProduct("Gu.Wpf.GridExtensions")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
