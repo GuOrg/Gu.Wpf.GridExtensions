@@ -9,14 +9,20 @@
             typeof(GridCell),
             typeof(Cell),
             new PropertyMetadata(
-                default(GridCell), 
+                default(GridCell),
                 OnIndexChanged));
 
+        /// <summary>Helper for setting <see cref="IndexProperty"/> on <paramref name="element"/>.</summary>
+        /// <param name="element"><see cref="UIElement"/> to set <see cref="IndexProperty"/> on.</param>
+        /// <param name="value">Index property value.</param>
         public static void SetIndex(UIElement element, GridCell value)
         {
             element.SetValue(IndexProperty, value);
         }
 
+        /// <summary>Helper for getting <see cref="IndexProperty"/> from <paramref name="element"/>.</summary>
+        /// <param name="element"><see cref="UIElement"/> to read <see cref="IndexProperty"/> from.</param>
+        /// <returns>Index property value.</returns>
         [AttachedPropertyBrowsableForChildren(IncludeDescendants = false)]
         [AttachedPropertyBrowsableForType(typeof(UIElement))]
         public static GridCell GetIndex(UIElement element)

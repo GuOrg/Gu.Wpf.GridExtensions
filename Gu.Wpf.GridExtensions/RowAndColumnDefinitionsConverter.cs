@@ -5,7 +5,6 @@
     using System.Globalization;
     using System.Linq;
     using System.Security;
-    using System.Windows.Controls;
 
     public class RowAndColumnDefinitionsConverter : TypeConverter
     {
@@ -13,14 +12,16 @@
         private static readonly ColumnDefinitionsConverter ColumnsConverter = new ColumnDefinitionsConverter();
         private static readonly char[] SeparatorChars = { ',', ';' };
 
+        /// <inheritdoc />
         public override bool CanConvertFrom(ITypeDescriptorContext typeDescriptorContext, Type sourceType) => sourceType == typeof(string);
 
+        /// <inheritdoc />
         public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext, Type destinationType) => false;
 
+        /// <inheritdoc />
         public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object source)
         {
-            var text = source as string;
-            if (text != null)
+            if (source is string text)
             {
                 var parts = text.Split(SeparatorChars, StringSplitOptions.RemoveEmptyEntries);
                 if (parts.Length != 2)
@@ -41,6 +42,7 @@
             return base.ConvertFrom(typeDescriptorContext, cultureInfo, source);
         }
 
+        /// <inheritdoc />
         [SecurityCritical]
         public override object ConvertTo(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object value, Type destinationType)
         {

@@ -7,12 +7,15 @@ namespace Gu.Wpf.GridExtensions
     using System.Linq;
     using System.Windows;
 
+    /// <summary>
+    /// Helpers for parsing multiple grid lenths
+    /// </summary>
     internal static class GridLengthsParser
     {
         private static readonly GridLengthConverter GridLengthConverter = new GridLengthConverter();
         private static readonly char[] SeparatorChars = { ',', ' ' };
 
-        public static IEnumerable<GridLength> Parse(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, string text)
+        internal static IEnumerable<GridLength> Parse(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, string text)
         {
             try
             {

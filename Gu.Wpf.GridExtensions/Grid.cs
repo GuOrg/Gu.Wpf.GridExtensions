@@ -12,14 +12,20 @@
                 default(RowAndColumnDefinitions),
                 OnLayoutChanged));
 
-        public static void SetLayout(DependencyObject element, RowAndColumnDefinitions value)
+        /// <summary>Helper for setting <see cref="LayoutProperty"/> on <paramref name="element"/>.</summary>
+        /// <param name="element"><see cref="System.Windows.Controls.Grid"/> to set <see cref="LayoutProperty"/> on.</param>
+        /// <param name="value">Layout property value.</param>
+        public static void SetLayout(System.Windows.Controls.Grid element, RowAndColumnDefinitions value)
         {
             element.SetValue(LayoutProperty, value);
         }
 
+        /// <summary>Helper for getting <see cref="LayoutProperty"/> from <paramref name="element"/>.</summary>
+        /// <param name="element"><see cref="System.Windows.Controls.Grid"/> to read <see cref="LayoutProperty"/> from.</param>
+        /// <returns>Layout property value.</returns>
         [AttachedPropertyBrowsableForChildren(IncludeDescendants = false)]
-        [AttachedPropertyBrowsableForType(typeof(Grid))]
-        public static RowAndColumnDefinitions GetLayout(DependencyObject element)
+        [AttachedPropertyBrowsableForType(typeof(System.Windows.Controls.Grid))]
+        public static RowAndColumnDefinitions GetLayout(System.Windows.Controls.Grid element)
         {
             return (RowAndColumnDefinitions)element.GetValue(LayoutProperty);
         }
