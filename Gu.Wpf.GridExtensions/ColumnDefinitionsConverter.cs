@@ -6,19 +6,19 @@ namespace Gu.Wpf.GridExtensions
     using System.Linq;
     using System.Security;
 
+    /// <inheritdoc />
     public class ColumnDefinitionsConverter : TypeConverter
     {
+        /// <inheritdoc />
         public override bool CanConvertFrom(ITypeDescriptorContext typeDescriptorContext, Type sourceType) => sourceType == typeof(string);
 
-        public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext,Type destinationType) => false;
+        /// <inheritdoc />
+        public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext, Type destinationType) => false;
 
-        public override object ConvertFrom(
-            ITypeDescriptorContext typeDescriptorContext,
-            CultureInfo cultureInfo,
-            object source)
+        /// <inheritdoc />
+        public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object source)
         {
-            var text = source as string;
-            if (text != null)
+            if (source is string text)
             {
                 var lengths = GridLengthsParser.Parse(typeDescriptorContext, cultureInfo, text);
                 var columnDefinitions = lengths.Select(gl => new System.Windows.Controls.ColumnDefinition { Width = gl })
@@ -29,12 +29,9 @@ namespace Gu.Wpf.GridExtensions
             return base.ConvertFrom(typeDescriptorContext, cultureInfo, source);
         }
 
+        /// <inheritdoc />
         [SecurityCritical]
-        public override object ConvertTo(
-            ITypeDescriptorContext typeDescriptorContext,
-            CultureInfo cultureInfo,
-            object value,
-            Type destinationType)
+        public override object ConvertTo(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object value, Type destinationType)
         {
             throw new NotSupportedException();
         }

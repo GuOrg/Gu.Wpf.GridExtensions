@@ -2,8 +2,12 @@
 {
     using System.Windows;
 
+    /// <summary> Defines an attached property for setting Grid.Layout instead of Grid.RowDefinitions and Grid.ColumnDefinitions. </summary>
     public static class Grid
     {
+        /// <summary>
+        /// A string like "Auto Auto *, Auto *.
+        /// </summary>
         public static readonly DependencyProperty LayoutProperty = DependencyProperty.RegisterAttached(
             "Layout",
             typeof(RowAndColumnDefinitions),
@@ -32,15 +36,12 @@
 
         private static void OnLayoutChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var layout = e.NewValue as RowAndColumnDefinitions;
-            if (layout == null)
+            if (e.NewValue is RowAndColumnDefinitions layout)
             {
-                return;
+                var grid = (System.Windows.Controls.Grid)d;
+                grid.SetCurrentValue(Row.DefinitionsProperty, layout.RowDefinitions);
+                grid.SetCurrentValue(Column.DefinitionsProperty, layout.ColumnDefinitions);
             }
-
-            var grid = (System.Windows.Controls.Grid)d;
-            grid.SetCurrentValue(Row.DefinitionsProperty, layout.RowDefinitions);
-            grid.SetCurrentValue(Column.DefinitionsProperty, layout.ColumnDefinitions);
         }
     }
 }

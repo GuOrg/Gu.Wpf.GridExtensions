@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Security;
 
+    /// <inheritdoc />
     public class RowAndColumnDefinitionsConverter : TypeConverter
     {
         private static readonly RowDefinitionsConverter RowsConverter = new RowDefinitionsConverter();

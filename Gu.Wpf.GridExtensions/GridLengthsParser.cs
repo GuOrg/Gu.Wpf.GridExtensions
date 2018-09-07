@@ -8,7 +8,7 @@ namespace Gu.Wpf.GridExtensions
     using System.Windows;
 
     /// <summary>
-    /// Helpers for parsing multiple grid lenths
+    /// Helpers for parsing multiple grid lengths.
     /// </summary>
     internal static class GridLengthsParser
     {
@@ -25,7 +25,7 @@ namespace Gu.Wpf.GridExtensions
             }
             catch (Exception e)
             {
-                var message = $"Could not parse gridlengts from {text}.\r\n" +
+                var message = $"Could not parse grid lengths from {text}.\r\n" +
                               $"Expected a string like '* 20 Auto'\r\n" +
                               $"Valid separators are {{{string.Join(", ", SeparatorChars.Select(x => $"'x'"))}}}";
                 throw new FormatException(message, e);

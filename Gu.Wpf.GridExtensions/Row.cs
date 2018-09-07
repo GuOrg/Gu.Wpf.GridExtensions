@@ -2,8 +2,10 @@
 {
     using System.Windows;
 
+    /// <summary> Defines an attached property for setting Grid.RowDefinitions as a string. </summary>
     public static class Row
     {
+        /// <summary> A string like Auto Auto *. </summary>
         public static readonly DependencyProperty DefinitionsProperty = DependencyProperty.RegisterAttached(
             "Definitions",
             typeof(RowDefinitions),

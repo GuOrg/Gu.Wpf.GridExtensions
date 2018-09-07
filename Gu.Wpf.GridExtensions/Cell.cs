@@ -2,8 +2,10 @@
 {
     using System.Windows;
 
+    /// <summary> Defines an attached property for setting Grid.Cell instead of Grid.Row and Grid.Column. </summary>
     public static class Cell
     {
+        /// <summary> A string like 1 2 for row 1 column 2. </summary>
         public static readonly DependencyProperty IndexProperty = DependencyProperty.RegisterAttached(
             "Index",
             typeof(GridCell),
