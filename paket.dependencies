@@ -8,3 +8,9 @@ group Analyzers
   nuget Gu.Analyzers
   nuget PropertyChangedAnalyzers
   nuget WpfAnalyzers
+
+group Test
+  source http://nuget.org/api/v2
+  storage: none
+  nuget NUnit
+  nuget Gu.Wpf.UiAutomation
