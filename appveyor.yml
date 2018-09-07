@@ -1,0 +1,12 @@
+os: Visual Studio 2017
+configuration: Release
+platform: Any CPU
+before_build:
+  ps: dotnet restore
+  
+build:
+  verbosity: minimal
+
+on_failure:
+  - ps: Get-ChildItem $env:temp\*.png | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
+
