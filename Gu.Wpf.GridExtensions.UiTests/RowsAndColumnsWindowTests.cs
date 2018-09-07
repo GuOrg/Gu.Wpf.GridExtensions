@@ -3,10 +3,10 @@
     using Gu.Wpf.UiAutomation;
     using NUnit.Framework;
 
-    public class LayoutWindowTests
+    public class RowsAndColumnsWindowTests
     {
         private const string Exe = "Gu.Wpf.GridExtensions.Demo.exe";
-        private const string WindowName = "LayoutWindow";
+        private const string WindowName = "RowsAndColumnsWindow";
 
         [OneTimeSetUp]
         public void OnetimeSetup()

@@ -24,7 +24,8 @@
     <Grid
         Width="300"
         Height="300"
-        gu:Grid.Layout="100 Auto * *, Auto *">
+        gu:Column.Definitions="Auto *"
+        gu:Row.Definitions="100 Auto * *">
         <GroupBox
             Grid.Row="0"
             Grid.Column="0"
