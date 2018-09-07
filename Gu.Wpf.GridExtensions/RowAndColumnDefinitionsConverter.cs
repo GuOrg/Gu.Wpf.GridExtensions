@@ -33,8 +33,8 @@
 
                 return new RowAndColumnDefinitions
                 {
-                    RowDefinitions = (RowDefinitions) RowsConverter.ConvertFrom(typeDescriptorContext, cultureInfo, parts[0]),
-                    ColumnDefinitions = (ColumnDefinitions) ColumnsConverter.ConvertFrom(typeDescriptorContext, cultureInfo, parts[1]),
+                    RowDefinitions = (RowDefinitions)RowsConverter.ConvertFrom(typeDescriptorContext, cultureInfo, parts[0]),
+                    ColumnDefinitions = (ColumnDefinitions)ColumnsConverter.ConvertFrom(typeDescriptorContext, cultureInfo, parts[1]),
                 };
             }
 

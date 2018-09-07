@@ -13,7 +13,6 @@
                 FrameworkPropertyMetadataOptions.NotDataBindable,
                 OnDefinitionsChanged));
 
-
         public static void SetDefinitions(System.Windows.Controls.Grid element, ColumnDefinitions value)
         {
             element.SetValue(DefinitionsProperty, value);

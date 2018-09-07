@@ -5,11 +5,11 @@
     public static class Grid
     {
         public static readonly DependencyProperty LayoutProperty = DependencyProperty.RegisterAttached(
-            "Layout", 
+            "Layout",
             typeof(RowAndColumnDefinitions),
             typeof(Grid),
             new FrameworkPropertyMetadata(
-                default(RowAndColumnDefinitions), 
+                default(RowAndColumnDefinitions),
                 OnLayoutChanged));
 
         public static void SetLayout(DependencyObject element, RowAndColumnDefinitions value)
@@ -21,7 +21,7 @@
         [AttachedPropertyBrowsableForType(typeof(Grid))]
         public static RowAndColumnDefinitions GetLayout(DependencyObject element)
         {
-            return (RowAndColumnDefinitions) element.GetValue(LayoutProperty);
+            return (RowAndColumnDefinitions)element.GetValue(LayoutProperty);
         }
 
         private static void OnLayoutChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -32,7 +32,7 @@
                 return;
             }
 
-            var grid = (System.Windows.Controls.Grid) d;
+            var grid = (System.Windows.Controls.Grid)d;
             grid.SetCurrentValue(Row.DefinitionsProperty, layout.RowDefinitions);
             grid.SetCurrentValue(Column.DefinitionsProperty, layout.ColumnDefinitions);
         }

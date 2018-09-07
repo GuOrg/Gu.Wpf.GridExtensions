@@ -12,7 +12,6 @@
                 default(GridCell), 
                 OnIndexChanged));
 
-
         public static void SetIndex(UIElement element, GridCell value)
         {
             element.SetValue(IndexProperty, value);
