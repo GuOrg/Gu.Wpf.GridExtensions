@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gu.Wpf.FlipView\Gu.Wpf.GridExtensions.csproj" />
+    <ProjectReference Include="..\Gu.Wpf.GridExtensions\Gu.Wpf.GridExtensions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
