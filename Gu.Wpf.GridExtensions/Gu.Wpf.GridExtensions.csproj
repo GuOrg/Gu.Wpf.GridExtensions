@@ -14,10 +14,10 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
-  <!--<PropertyGroup>
+  <PropertyGroup>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Gu.Wpf.GridExtensions.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>-->
+  </PropertyGroup>
 
   <PropertyGroup>
     <Version>0.1.0.0</Version>
@@ -31,6 +31,8 @@
     </PackageReleaseNotes>
     <PackageTags>xaml wpf grid</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Gu.Wpf.GridExtensions.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
