@@ -1,7 +1,0 @@
-﻿type project
-tags xaml wpf grid
-projectUrl https://github.com/JohanLarsson/Gu.Wpf.GridExtensions
-licenseUrl http://opensource.org/licenses/MIT
-
-excludedgroups
-  Analyzers
