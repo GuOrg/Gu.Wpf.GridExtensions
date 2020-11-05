@@ -3,15 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gu.Wpf.GridExtensions", "Gu.Wpf.GridExtensions\Gu.Wpf.GridExtensions.csproj", "{8300F62F-529B-492D-89A0-D67B67DDFDD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gu.Wpf.GridExtensions", "Gu.Wpf.GridExtensions\Gu.Wpf.GridExtensions.csproj", "{8300F62F-529B-492D-89A0-D67B67DDFDD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gu.Wpf.GridExtensions.Demo", "Gu.Wpf.GridExtensions.Demo\Gu.Wpf.GridExtensions.Demo.csproj", "{4FA150BE-E90E-4380-AA58-C1800749A451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gu.Wpf.GridExtensions.Demo", "Gu.Wpf.GridExtensions.Demo\Gu.Wpf.GridExtensions.Demo.csproj", "{4FA150BE-E90E-4380-AA58-C1800749A451}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gu.Wpf.GridExtensions.UiTests", "Gu.Wpf.GridExtensions.UiTests\Gu.Wpf.GridExtensions.UiTests.csproj", "{F05C4F65-0A55-4BC1-B6A3-3CB5E900BE67}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{8E9468B2-369D-4C26-A181-1340724E2914}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{025B90A7-443A-4221-9CF7-D072B73CB519}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
 	EndProjectSection
 EndProject
 Global
