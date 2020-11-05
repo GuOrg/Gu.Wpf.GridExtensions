@@ -18,14 +18,15 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Version>0.1.0.0</Version>
+		<Version>0.1.1</Version>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<Authors>Johan Larsson</Authors>
 		<Description>Convenience attached properties for WPF's Grid.</Description>
 		<NeutralLanguage>en</NeutralLanguage>
 		<RepositoryUrl>https://github.com/GuOrg/Gu.Wpf.GridExtensions</RepositoryUrl>
 		<PackageReleaseNotes>
-
+			0.1.1
+			netcoreapp3.1 and nullable enable
 		</PackageReleaseNotes>
 		<PackageTags>xaml wpf grid</PackageTags>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
