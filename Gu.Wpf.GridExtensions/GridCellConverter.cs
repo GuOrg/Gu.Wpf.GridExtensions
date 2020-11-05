@@ -1,4 +1,4 @@
-﻿namespace Gu.Wpf.GridExtensions
+namespace Gu.Wpf.GridExtensions
 {
     using System;
     using System.ComponentModel;
@@ -12,21 +12,21 @@
         private static readonly char[] SeparatorChars = { ',', ' ' };
 
         /// <inheritdoc />
-        public override bool CanConvertFrom(ITypeDescriptorContext typeDescriptorContext, Type sourceType)
+        public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
         {
             return sourceType == typeof(string);
         }
 
         /// <inheritdoc />
-        public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext, Type destinationType)
+        public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
         {
             return false;
         }
 
         /// <inheritdoc />
-        public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object source)
+        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
-            if (source is string text)
+            if (value is string text)
             {
                 try
                 {
@@ -37,7 +37,7 @@
                         throw new FormatException(message);
                     }
 
-                    return new GridCell(int.Parse(strings[0]), int.Parse(strings[1]));
+                    return new GridCell(int.Parse(strings[0], culture), int.Parse(strings[1], culture));
                 }
                 catch (Exception e)
                 {
@@ -48,12 +48,12 @@
                 }
             }
 
-            return base.ConvertFrom(typeDescriptorContext, cultureInfo, source);
+            return base.ConvertFrom(context, culture, value);
         }
 
         /// <inheritdoc />
         [SecurityCritical]
-        public override object ConvertTo(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object value, Type destinationType)
+        public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
         {
             throw new NotSupportedException();
         }

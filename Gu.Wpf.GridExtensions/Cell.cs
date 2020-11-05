@@ -1,4 +1,4 @@
-﻿namespace Gu.Wpf.GridExtensions
+namespace Gu.Wpf.GridExtensions
 {
     using System.Windows;
 
@@ -19,6 +19,11 @@
         /// <param name="value">Index property value.</param>
         public static void SetIndex(UIElement element, GridCell value)
         {
+            if (element is null)
+            {
+                throw new System.ArgumentNullException(nameof(element));
+            }
+
             element.SetValue(IndexProperty, value);
         }
 
@@ -29,6 +34,11 @@
         [AttachedPropertyBrowsableForType(typeof(UIElement))]
         public static GridCell GetIndex(UIElement element)
         {
+            if (element is null)
+            {
+                throw new System.ArgumentNullException(nameof(element));
+            }
+
             return (GridCell)element.GetValue(IndexProperty);
         }
 

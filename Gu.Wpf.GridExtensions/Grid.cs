@@ -1,4 +1,4 @@
-﻿namespace Gu.Wpf.GridExtensions
+namespace Gu.Wpf.GridExtensions
 {
     using System.Windows;
 
@@ -19,8 +19,13 @@
         /// <summary>Helper for setting <see cref="LayoutProperty"/> on <paramref name="element"/>.</summary>
         /// <param name="element"><see cref="System.Windows.Controls.Grid"/> to set <see cref="LayoutProperty"/> on.</param>
         /// <param name="value">Layout property value.</param>
-        public static void SetLayout(System.Windows.Controls.Grid element, RowAndColumnDefinitions value)
+        public static void SetLayout(System.Windows.Controls.Grid element, RowAndColumnDefinitions? value)
         {
+            if (element is null)
+            {
+                throw new System.ArgumentNullException(nameof(element));
+            }
+
             element.SetValue(LayoutProperty, value);
         }
 
@@ -29,9 +34,14 @@
         /// <returns>Layout property value.</returns>
         [AttachedPropertyBrowsableForChildren(IncludeDescendants = false)]
         [AttachedPropertyBrowsableForType(typeof(System.Windows.Controls.Grid))]
-        public static RowAndColumnDefinitions GetLayout(System.Windows.Controls.Grid element)
+        public static RowAndColumnDefinitions? GetLayout(System.Windows.Controls.Grid element)
         {
-            return (RowAndColumnDefinitions)element.GetValue(LayoutProperty);
+            if (element is null)
+            {
+                throw new System.ArgumentNullException(nameof(element));
+            }
+
+            return (RowAndColumnDefinitions?)element.GetValue(LayoutProperty);
         }
 
         private static void OnLayoutChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)

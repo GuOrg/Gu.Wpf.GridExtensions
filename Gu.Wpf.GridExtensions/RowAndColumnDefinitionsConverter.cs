@@ -14,15 +14,15 @@
         private static readonly char[] SeparatorChars = { ',', ';' };
 
         /// <inheritdoc />
-        public override bool CanConvertFrom(ITypeDescriptorContext typeDescriptorContext, Type sourceType) => sourceType == typeof(string);
+        public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType) => sourceType == typeof(string);
 
         /// <inheritdoc />
-        public override bool CanConvertTo(ITypeDescriptorContext typeDescriptorContext, Type destinationType) => false;
+        public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType) => false;
 
         /// <inheritdoc />
-        public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object source)
+        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
         {
-            if (source is string text)
+            if (value is string text)
             {
                 var parts = text.Split(SeparatorChars, StringSplitOptions.RemoveEmptyEntries);
                 if (parts.Length != 2)
@@ -35,17 +35,17 @@
 
                 return new RowAndColumnDefinitions
                 {
-                    RowDefinitions = (RowDefinitions)RowsConverter.ConvertFrom(typeDescriptorContext, cultureInfo, parts[0]),
-                    ColumnDefinitions = (ColumnDefinitions)ColumnsConverter.ConvertFrom(typeDescriptorContext, cultureInfo, parts[1]),
+                    RowDefinitions = (RowDefinitions)RowsConverter.ConvertFrom(context, culture, parts[0]),
+                    ColumnDefinitions = (ColumnDefinitions)ColumnsConverter.ConvertFrom(context, culture, parts[1]),
                 };
             }
 
-            return base.ConvertFrom(typeDescriptorContext, cultureInfo, source);
+            return base.ConvertFrom(context, culture, value);
         }
 
         /// <inheritdoc />
         [SecurityCritical]
-        public override object ConvertTo(ITypeDescriptorContext typeDescriptorContext, CultureInfo cultureInfo, object value, Type destinationType)
+        public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
         {
             throw new NotSupportedException();
         }
