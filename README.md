@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 [![NuGet](https://img.shields.io/nuget/v/Gu.Wpf.GridExtensions.svg)](https://www.nuget.org/packages/Gu.Wpf.GridExtensions/)
 [![Build status](https://ci.appveyor.com/api/projects/status/8kvvd5ggbkn2wevm/branch/master?svg=true)](https://ci.appveyor.com/project/JohanLarsson/gu-wpf-gridextensions/branch/master)
-
+[![Build Status](https://dev.azure.com/guorg/Gu.Wpf.GridExtensions/_apis/build/status/GuOrg.Gu.Wpf.GridExtensions?branchName=master)](https://dev.azure.com/guorg/Gu.Wpf.GridExtensions/_build/latest?definitionId=25&branchName=master)
 Attached properties for WPF's `Grid`
 
 ## Sample.
