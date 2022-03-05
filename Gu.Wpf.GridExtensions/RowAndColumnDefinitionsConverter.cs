@@ -1,4 +1,4 @@
-﻿namespace Gu.Wpf.GridExtensions
+namespace Gu.Wpf.GridExtensions
 {
     using System;
     using System.ComponentModel;
@@ -9,8 +9,8 @@
     /// <inheritdoc />
     public class RowAndColumnDefinitionsConverter : TypeConverter
     {
-        private static readonly RowDefinitionsConverter RowsConverter = new RowDefinitionsConverter();
-        private static readonly ColumnDefinitionsConverter ColumnsConverter = new ColumnDefinitionsConverter();
+        private static readonly RowDefinitionsConverter RowsConverter = new();
+        private static readonly ColumnDefinitionsConverter ColumnsConverter = new();
         private static readonly char[] SeparatorChars = { ',', ';' };
 
         /// <inheritdoc />
