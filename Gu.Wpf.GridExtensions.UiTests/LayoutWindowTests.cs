@@ -1,4 +1,4 @@
-﻿namespace Gu.Wpf.GridExtensions.UiTests
+namespace Gu.Wpf.GridExtensions.UiTests
 {
     using System.Globalization;
     using Gu.Wpf.UiAutomation;
@@ -12,10 +12,8 @@
         [OneTimeSetUp]
         public void OnetimeSetup()
         {
-            using (var app = Application.AttachOrLaunch(Exe, WindowName))
-            {
-                app.MainWindow.MoveTo(0, 0);
-            }
+            using var app = Application.AttachOrLaunch(Exe, WindowName);
+            app.MainWindow.MoveTo(0, 0);
         }
 
         [OneTimeTearDown]
@@ -32,12 +30,10 @@
         [TestCase("2 1", "207,207,100,50")]
         public void Bounds(string header, string bounds)
         {
-            using (var app = Application.AttachOrLaunch(Exe, WindowName))
-            {
-                var window = app.MainWindow;
-                var box = window.FindGroupBox(header);
-                Assert.AreEqual(bounds, box.Bounds.ToString(CultureInfo.InvariantCulture));
-            }
+            using var app = Application.AttachOrLaunch(Exe, WindowName);
+            var window = app.MainWindow;
+            var box = window.FindGroupBox(header);
+            Assert.AreEqual(bounds, box.Bounds.ToString(CultureInfo.InvariantCulture));
         }
     }
 }
