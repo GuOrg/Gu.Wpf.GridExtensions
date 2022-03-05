@@ -12,16 +12,10 @@ namespace Gu.Wpf.GridExtensions
         private static readonly char[] SeparatorChars = { ',', ' ' };
 
         /// <inheritdoc />
-        public override bool CanConvertFrom(ITypeDescriptorContext? context, Type sourceType)
-        {
-            return sourceType == typeof(string);
-        }
+        public override bool CanConvertFrom(ITypeDescriptorContext? context, Type sourceType) => sourceType == typeof(string);
 
         /// <inheritdoc />
-        public override bool CanConvertTo(ITypeDescriptorContext? context, Type destinationType)
-        {
-            return false;
-        }
+        public override bool CanConvertTo(ITypeDescriptorContext? context, Type? destinationType) => false;
 
         /// <inheritdoc />
         public override object ConvertFrom(ITypeDescriptorContext? context, CultureInfo culture, object value)

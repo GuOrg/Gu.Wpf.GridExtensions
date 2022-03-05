@@ -30,21 +30,21 @@ Gu.Wpf.GridExtensions.RowDefinitions.RowDefinitions(System.Collections.Generic.I
 Gu.Wpf.GridExtensions.RowDefinitionsConverter
 Gu.Wpf.GridExtensions.RowDefinitionsConverter.RowDefinitionsConverter() -> void
 override Gu.Wpf.GridExtensions.ColumnDefinitionsConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Type! sourceType) -> bool
-override Gu.Wpf.GridExtensions.ColumnDefinitionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type! destinationType) -> bool
+override Gu.Wpf.GridExtensions.ColumnDefinitionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type? destinationType) -> bool
 override Gu.Wpf.GridExtensions.ColumnDefinitionsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value) -> object!
 override Gu.Wpf.GridExtensions.ColumnDefinitionsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value, System.Type! destinationType) -> object!
 override Gu.Wpf.GridExtensions.GridCell.Equals(object? obj) -> bool
 override Gu.Wpf.GridExtensions.GridCell.GetHashCode() -> int
 override Gu.Wpf.GridExtensions.GridCellConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Type! sourceType) -> bool
-override Gu.Wpf.GridExtensions.GridCellConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type! destinationType) -> bool
+override Gu.Wpf.GridExtensions.GridCellConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type? destinationType) -> bool
 override Gu.Wpf.GridExtensions.GridCellConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value) -> object!
 override Gu.Wpf.GridExtensions.GridCellConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value, System.Type! destinationType) -> object!
 override Gu.Wpf.GridExtensions.RowAndColumnDefinitionsConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Type! sourceType) -> bool
-override Gu.Wpf.GridExtensions.RowAndColumnDefinitionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type! destinationType) -> bool
+override Gu.Wpf.GridExtensions.RowAndColumnDefinitionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type? destinationType) -> bool
 override Gu.Wpf.GridExtensions.RowAndColumnDefinitionsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value) -> object!
 override Gu.Wpf.GridExtensions.RowAndColumnDefinitionsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value, System.Type! destinationType) -> object!
 override Gu.Wpf.GridExtensions.RowDefinitionsConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Type! sourceType) -> bool
-override Gu.Wpf.GridExtensions.RowDefinitionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type! destinationType) -> bool
+override Gu.Wpf.GridExtensions.RowDefinitionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Type? destinationType) -> bool
 override Gu.Wpf.GridExtensions.RowDefinitionsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value) -> object!
 override Gu.Wpf.GridExtensions.RowDefinitionsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext? context, System.Globalization.CultureInfo! culture, object! value, System.Type! destinationType) -> object!
 static Gu.Wpf.GridExtensions.Cell.GetIndex(System.Windows.UIElement! element) -> Gu.Wpf.GridExtensions.GridCell
